@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<title>Matematika darsi</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* HAMMA TO‘RTBURCHAKLAR BIR XIL */
+.card {
+    width: 100%;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2563eb;
+}
+
+/* TEST TUGMALARI KICHIK ENI */
+.test-buttons {
+    display: flex;
+    flex-wrap: wrap; /* keyingi qatorga o‘tadi */
+    gap: 10px;       /* tugmalar orasidagi masofa */
+}
+
+.test-buttons button {
+    flex: 1 1 45%;   /* har tugma 45% eni, 2+2 yonma-yon */
+    padding: 10px;
+    border-radius: 8px;
+     border: 2px solid #2563eb;  /* chet chizig‘i ko‘k */
+    background: white;           /* boshlang‘ich fon oq */
+    color: #2563eb;              /* matn ko‘k */    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.test-buttons button:hover {
+    background: #2563eb;
+    color: white;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Matematika ta’lim platformasi</h1>
+    <p>1-dars: To‘plamlar nazariyasi</p>
+</header>
+
+<div class="container">
+
+    <!-- VIDEO -->
+    <div class="card">
+        <h2>🎥 Video dars</h2>
+        <iframe width="100%" height="350"
+        src="https://www.youtube.com/embed/XugD2BgoyxA"
+        allowfullscreen></iframe>
+    </div>
+
+
+</body>
+</html>
+    <!-- MATN -->
+    <div class="card">
+        <h2>📖 Dars matni</h2>
+        <p>Bu yerga dars matnini yozasan. To‘rtburchakning eni o‘zgarmaydi.</p>
+        <p>Quyidagi rasm A va B to‘plamlar kesishmasini ko‘rsatadi:</p>
+
+<iframe 
+  src="https://www.desmos.com/calculator/j0sikvwd8k" 
+  width="600" height="400" style="border:1px solid #ccc;">
+</iframe>
+        <img src="images/rasm.png" width="300">
+        <p><em>Rasm nomini o‘zing almashtirasan</em></p>
+    </div>
+
+    <!-- TEST -->
+    <div class="card test">
+      
+
+<h1>📚 Test: To‘plamlar Nazariyasi</h1>
+
+<div class="card">
+    <h2>1) To‘plamlar bo‘sh to‘plam nima?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, true)">A</button>
+        <button onclick="checkAnswer(this, false)">B</button>
+        <button onclick="checkAnswer(this, false)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<div class="card">
+    <h2>2) Universal to‘plam odatda qanday belgilanadi?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, false)">A nakldhfa</button>
+        <button onclick="checkAnswer(this, true)">Bcgb fd b</button>
+        <button onclick="checkAnswer(this, false)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<div class="card">
+    <h2>3) To‘plamlarning kesishmasi qanday belgilanadi?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, false)">A</button>
+        <button onclick="checkAnswer(this, false)">B</button>
+        <button onclick="checkAnswer(this, true)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<script>
+function checkAnswer(button, isCorrect) {
+    // Shu test kartasini topish
+    const card = button.closest('.card');
+    const resultDiv = card.querySelector('.result');
+    if (isCorrect) {
+        resultDiv.style.color = 'green';
+        resultDiv.innerText = "✅ To‘g‘ri javob!";
+    } else {
+        resultDiv.style.color = 'red';
+        resultDiv.innerText = "❌ Noto‘g‘ri javob!";
+    }
+}
+</script>
+<div class="card">
+    <h2>1) To‘plamlar bo‘sh to‘plam nima?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, true)">A</button>
+        <button onclick="checkAnswer(this, false)">B</button>
+        <button onclick="checkAnswer(this, false)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<div class="card">
+    <h2>2) Universal to‘plam odatda qanday belgilanadi?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, false)">A</button>
+        <button onclick="checkAnswer(this, true)">B</button>
+        <button onclick="checkAnswer(this, false)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<div class="card">
+    <h2>3) To‘plamlarning kesishmasi qanday belgilanadi?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, false)">A</button>
+        <button onclick="checkAnswer(this, false)">B</button>
+        <button onclick="checkAnswer(this, true)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<script>
+function checkAnswer(button, isCorrect) {
+    // Shu test kartasini topish
+    const card = button.closest('.card');
+    const resultDiv = card.querySelector('.result');
+    if (isCorrect) {
+        resultDiv.style.color = 'green';
+        resultDiv.innerText = "✅ To‘g‘ri javob!";
+    } else {
+        resultDiv.style.color = 'red';
+        resultDiv.innerText = "❌ Noto‘g‘ri javob!";
+    }
+}
+</script>
+<div class="card">
+    <h2>1) To‘plamlar bo‘sh to‘plam nima?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, true)">A</button>
+        <button onclick="checkAnswer(this, false)">B</button>
+        <button onclick="checkAnswer(this, false)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<div class="card">
+    <h2>2) Universal to‘plam odatda qanday belgilanadi?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, false)">A</button>
+        <button onclick="checkAnswer(this, true)">B</button>
+        <button onclick="checkAnswer(this, false)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<div class="card">
+    <h2>3) To‘plamlarning kesishmasi qanday belgilanadi?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, false)">A</button>
+        <button onclick="checkAnswer(this, false)">B</button>
+        <button onclick="checkAnswer(this, true)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<script>
+function checkAnswer(button, isCorrect) {
+    // Shu test kartasini topish
+    const card = button.closest('.card');
+    const resultDiv = card.querySelector('.result');
+    if (isCorrect) {
+        resultDiv.style.color = 'green';
+        resultDiv.innerText = "✅ To‘g‘ri javob!";
+    } else {
+        resultDiv.style.color = 'red';
+        resultDiv.innerText = "❌ Noto‘g‘ri javob!";
+    }
+}
+</script>
+<div class="card">
+    <h2>1) To‘plamlar bo‘sh to‘plam nima?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, true)">A</button>
+        <button onclick="checkAnswer(this, false)">B</button>
+        <button onclick="checkAnswer(this, false)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<div class="card">
+    <h2>2) Universal to‘plam odatda qanday belgilanadi?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, false)">A</button>
+        <button onclick="checkAnswer(this, true)">B</button>
+        <button onclick="checkAnswer(this, false)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<div class="card">
+    <h2>3) To‘plamlarning kesishmasi qanday belgilanadi?</h2>
+    <div class="button-group">
+        <button onclick="checkAnswer(this, false)">A</button>
+        <button onclick="checkAnswer(this, false)">B</button>
+        <button onclick="checkAnswer(this, true)">C</button>
+        <button onclick="checkAnswer(this, false)">D</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<script>
+function checkAnswer(button, isCorrect) {
+    // Shu test kartasini topish
+    const card = button.closest('.card');
+    const resultDiv = card.querySelector('.result');
+    if (isCorrect) {
+        resultDiv.style.color = 'green';
+        resultDiv.innerText = "✅ To‘g‘ri javob!";
+    } else {
+        resultDiv.style.color = 'red';
+        resultDiv.innerText = "❌ Noto‘g‘ri javob!";
+    }
+}
+</script>
+</body>
+</html>
